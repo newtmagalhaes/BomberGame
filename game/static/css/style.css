@@ -1,50 +1,44 @@
 /* Global */
-h1 {color: yellowgreen;}
-
-.container-fluid {
-  padding: 0;
-}
+/* h1 {color: yellowgreen;} */
 
 /* NavBar */
-.navbar-nav {
-  margin: auto;
-  letter-spacing: 3px;
-}
 
-.navbar-brand {
+/* .navbar-brand {
   background: yellowgreen;
   border-radius: 5px;
   font-weight: bold;
   margin-left: 30px;
-}
+} */
 
 /* Content */
-.content {
+/* .content {
   background-color: #333;
   border: 3px, solid, black;
   border-radius: 10px;
-  height: 60vh;
+  box-sizing: border-box;
+  height: 78vh;
   margin-top: 5vh;
   margin-bottom: 5vh;
   padding: 0;
   text-align: center;
-}
+}  */
 
-.game_screen {
+/* .app_screen {
   border: 5px, solid, yellowgreen;
   border-radius: 5px;
+  box-sizing: border-box;
   margin: auto;
   padding: 5%;
   text-align: center;
-}
+} */
 
 
 /* Footer */
-footer {
+/* footer {
   background-color: #333;
   border-top: 2px, solid, black;
   color: azure;
   text-align: center;
   height: 5%;
-}
+} */
 
