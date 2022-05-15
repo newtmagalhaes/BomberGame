@@ -19,6 +19,7 @@
 
   <!-- Meu CSS -->
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/button_matrix.css' %}">
 </head>
 <body class="bg-dark">
   <!-- div requisitada pelo Bootstrap -->
@@ -26,9 +27,9 @@
     <div class="d-grid offset-2 col-8 gap-3">
       <div class="row">
         <!-- NavBar -->
-        <nav class="navbar navbar-expand-lg bg-dark">
+        <nav class="navbar navbar-expand-lg bg-success">
           <div class="container-fluid">
-            <a class="navbar-brand" href="">B💣mber</a>
+            <a class="navbar-brand border border-dark" style="border-radius: 10px;" href="{% url 'index' %}">B💣mber</a>
             <button class="navbar-toggler"
                     type="button"
                     data-bs-toggle="collapse"
@@ -41,9 +42,9 @@
            
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
+                <a class="nav-link" href="{% url 'regras' %}">Regras</a>
+                <a class="nav-link" href="{% url 'sobre' %}">Sobre</a>
                 <a class="nav-link disabled" href="#">Estatísticas</a>
-                <a class="nav-link disabled" href="#">Regras</a>
-                <a class="nav-link" href="#">Sobre</a>
               </div>
           </div>
         </nav>
@@ -51,13 +52,17 @@
       <div class="row">
         <!-- Content -->
         <div class="card text-center">
-          <div class="card-header">{% block page_name %}{% endblock %}</div>
+          <div class="card-header">
+            {% block header %}{% endblock header %}
+          </div>
 
-          <div class="card-body">
+          <div class="card-body text-justyfied">
             {% block content %}{% endblock content %}
           </div>
 
-          <div class="card-footer text-muted">anotação</div>
+          <div class="card-footer text-muted">
+            {% block footer %}{% endblock footer %}
+          </div>
         </div>
       </div>
       <div class="row">

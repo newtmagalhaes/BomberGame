@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %}Bomber game{% endblock %}
+{% block title %}Bomber{% endblock %}
 
-{% block page_name %}Bomber{% endblock %}
+{% block header %}Bem vindo!{% endblock header %}
 
 {% block content %}
-<button type="button" class="btn btn-primary" href="#">Iniciar jogo</button>
+<a href="{% url 'game' %}">
+  <button type="button" class="btn btn-primary">Iniciar jogo</button>
+</a>
 {% endblock content %}
+
+{% block footer %}Que seu dia hoje seja bombastico!!{% endblock footer %}

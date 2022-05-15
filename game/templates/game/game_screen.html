@@ -1,1 +1,21 @@
-<h1>Site em obras. Obg pela paciência</h1>
+{% extends 'base.html' %}
+
+{% block title %}Bomber | game{% endblock %}
+
+{% block header %}Bomber{% endblock header %}
+
+{% block content %}
+<div class="btn-group btn-matrix" role="group" aria-label="Five Column Button Matrix">
+  {% for i in n_buttons %}
+    <button type="button" class="btn btn-success">
+      {% if forloop.counter == 13 %}
+        Free
+      {% else %}
+        {{ forloop.counter }}
+      {% endif %}
+    </button>
+  {% endfor %}
+</div>
+{% endblock content %}
+
+{% block footer %}Progress Bar{% endblock footer %}

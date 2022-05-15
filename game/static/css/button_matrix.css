@@ -1,0 +1,42 @@
+/* Code from: https://codepen.io/glebkema/pen/ZEKKoJG */
+
+/* Para uma matrix X×Y, modifique X abaixo */
+
+/* Arrange buttons */
+.btn-matrix {
+	flex-wrap: wrap; /* allow buttons to jump to another row */
+}
+.btn-matrix > .btn {
+  /* width: (100/X)% */
+	width: 20%; /* force buttons to have the same width regardless of content */
+}
+/* .btn:nth-child(Xn + X+1) */
+.btn-matrix > .btn:nth-child(5n + 6) {
+	margin-left: 0; /* because .btn-group adds `margin-left: -1px;` to all buttons */
+}
+/* .btn:nth-child(X + X+1) */
+.btn-matrix > .btn:nth-child(n + 6) {
+	margin-top: -1px; /* superimpose borders of the buttons from adjacent rows */
+}
+
+/* Fix border radius */
+.btn-matrix > .btn:first-child {
+	border-bottom-left-radius: 0;
+}
+/* .btn:nth-child(X) */
+.btn-matrix > .btn:nth-child(5) {
+	border-top-right-radius: 4px !important;
+}
+/* .btn:nth-last-child(X) */
+.btn-matrix > .btn:nth-last-child(5) {
+	border-bottom-left-radius: 4px !important;
+}
+.btn-matrix > .btn:last-child {
+	border-top-right-radius: 0;
+}
+
+/* Decorations */
+.btn-matrix {
+	margin: 20px 0;
+	max-width: 500px;
+}
